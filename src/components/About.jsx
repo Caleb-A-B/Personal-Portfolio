@@ -1,13 +1,14 @@
 import React from "react";
-import Tilt from "react-tilt";
+// import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  // <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -31,7 +32,7 @@ const ServiceCard = ({ index, title, icon }) => (
         </h3>
       </div>
     </motion.div>
-  </Tilt>
+  /* </Tilt> */
 );
 
 const About = () => {
@@ -61,5 +62,7 @@ const About = () => {
     </>
   );
 };
+
+//this is bullshit, go to BCS and minute mark 74107
 
 export default SectionWrapper(About, "about");
